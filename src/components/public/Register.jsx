@@ -9,7 +9,6 @@ const Register = () => {
 
     const navigate = useNavigate();
 
-    const [username, setUsername] = useState();
     const [email, setEmail] = useState();
     const [password, setPassword] = useState();
     const [confirm_password, setConfirm_password] = useState();
@@ -26,7 +25,7 @@ const Register = () => {
         e.preventDefault();
 
         const data = {
-            username, first_name, last_name, email, password
+            username : 'jiggyapp', first_name, last_name, email, password
         }
 
         if (password !== confirm_password ) {alert('Password mismatch')}
@@ -62,16 +61,6 @@ const Register = () => {
 
                 <div className='my-12'>
                     <form onSubmit={handleRegister} className='space-y-4'>
-                        <div>
-                            <div className='relative z-10 mb-[-12px] ml-3 text-gray-300 text-md bg-black max-w-max'>Username</div>
-                            <input 
-                                type='text'
-                                className='w-full bg-transparent border border-gray-800 rounded-md p-3 text-gray-500 placeholder-gray-700'
-                                placeholder='first name'
-                                onChange={(e) => setUsername(e.target.value)}
-                                required
-                            />
-                        </div>
 
                         <div>
                             <div className='relative z-10 mb-[-12px] ml-3 text-gray-300 text-md bg-black max-w-max'>First Name</div>
